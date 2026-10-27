@@ -34,33 +34,16 @@ The page presents different ocean habitats rather than a literal dive at one loc
 
 No frameworks, jQuery, package installation or build tools are required.
 
-## Running locally
+## Live website
 
-Download the project folder and open `index.html` in a modern browser. Alternatively, open the folder in Visual Studio Code and launch the page with Live Server.
+[Explore Marine Life on GitHub Pages](https://hollydays-git.github.io/Parallax-scrolling_Marine-life/)
 
-Keep the image files beside the HTML, CSS and JavaScript files. The page works offline; external source and reference links require an internet connection.
-
-## Project structure
-
-```text
-test-hw/
-|-- index.html
-|-- style.css
-|-- script.js
-|-- README.md
-|-- surface.jpg
-|-- clownfish.jpg
-|-- chambered-nautilus-01.jpg
-|-- Fangtooth_Fish.jpeg
-|-- dumbo_octopus_web_optimized.jpg
-`-- Mariana.snailfish.CTview4.AdamSummers.jpg
-```
 
 `index.html` contains the introduction, five animal sections and footer. `style.css` defines the visual appearance. `script.js` contains the `parallaxScroll` function, which moves elements at different rates using the current scroll position and the starting position of each section.
 
 ## Image credits
 
-The site uses a combination of photographs, a 3D model preview, an illustration and a scientific CT scan. The source links below correspond to the files currently displayed on the page.
+The site uses a combination of photographs, a 3D model preview, an illustration and a scientific CT scan. All image files are stored in the `img/` folder. The source links below correspond to the files currently displayed on the page.
 
 | Local file | Credit and source |
 | --- | --- |
