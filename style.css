@@ -1,0 +1,121 @@
+/* 1. Basic page styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #02070d;
+  color: white;
+  line-height: 1.8;
+}
+
+a { color: #c1f0e8; }
+
+/* 2. The first screen, like .background and .layer in the template */
+.background {
+  height: 100vh;
+  min-height: 600px;
+  position: relative;
+  overflow: hidden;
+  background: #137085;
+}
+
+.layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.layer-1 {
+  background-image: linear-gradient(transparent, #075268), url("img\\surface.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.layer-2 {
+  height: 130%;
+  background-image: radial-gradient(circle, #ffffff66 2px, transparent 3px);
+  background-size: 130px 170px;
+  opacity: 0.5;
+}
+
+.title {
+  position: absolute;
+  top: 38%;
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 80px;
+  line-height: 1.2;
+  margin: 15px 0;
+}
+
+.title a {
+  display: inline-block;
+  margin-top: 25px;
+}
+
+/* 3. One gradient darkens the water across all five sections */
+.ocean {
+  background: linear-gradient(#0a5b74, #092138, #02070d);
+}
+
+.content {
+  position: relative;
+  min-height: 750px;
+  padding: 100px 10%;
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  overflow: hidden;
+}
+
+.text { flex: 1; }
+.depth { color: #9de1db; font-size: 13px; letter-spacing: 2px; }
+h2 { font-size: 36px; line-height: 1.3; margin: 15px 0; }
+h3 { color: #b3d8df; font-size: 18px; margin-bottom: 20px; }
+.text > p:last-child { color: #d2e3e8; }
+
+.fish {
+  width: 43%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Show the full animal in these photographs. */
+#fish-2, #fish-3, #fish-4, #fish-5 { object-fit: contain; }
+
+/*Footer and credits*/
+footer { padding: 65px 10%; text-align: center; }
+footer > p { color: #a6bec9; font-size: 13px; margin: 30px 0; }
+details { max-width: 800px; margin: 40px auto 0; text-align: left; font-size: 13px; }
+summary { cursor: pointer; }
+details ul { padding-left: 20px; margin: 20px 0; }
+details li { margin-bottom: 10px; }
+
+/* 5. On a phone, put the picture below the text */
+@media (max-width: 760px) {
+  h1 { font-size: 48px; }
+  h2 { font-size: 29px; }
+  .title > p { font-size: 13px; }
+  .content { flex-direction: column; padding: 70px 8%; gap: 35px; }
+  .fish { width: 100%; height: 300px; }
+}
+
+/* Respect the visitor's system setting for reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .layer, .title { top: 0 !important; }
+  .title { top: 38% !important; }
+  .fish { transform: none !important; }
+}
